@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:cadastro_escola"
         mc:Ignorable="d"
         Title="Cadastro da Escola" Height="800" Width="800">
-    <Grid Background="OldLace">
+    <Grid Background="#2ccbcb">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="109*"/>
             <ColumnDefinition Width="208*"/>
@@ -18,41 +18,45 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Cadastro da Escola" FontSize="26" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Impact" Margin="76,0,0,0" Grid.Column="1"/>
-        <Grid Grid.Row="1" Background="OldLace" Grid.ColumnSpan="3">
+        <Label Content="Cadastro da Escola" FontSize="26" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Rubik" Margin="76,0,0,0" Grid.Column="1" Foreground="#fbdb34" FontWeight="Bold"/>
+        <Grid Grid.Row="1" Background = "#2ccbcb" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
-                <Label Content="Registro" FontSize="20" FontFamily="Impact"/>
+                <Label Content="Registros" FontSize="20" FontFamily="Rubik" Foreground="#484180" FontWeight="Bold"/>
 
-                <Label Content="Nome Fantasia" FontSize="15"/>
+                <Label Content="Nome Fantasia" FontSize="15" Foreground="#fb3374"/>
                 <TextBox x:Name="txtNomeFantasia" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="Razão Social" FontSize="16"/>
+                <Label Content="Razão Social" FontSize="16" Foreground="#fb3374"/>
                 <TextBox x:Name="txtRazaoSocial" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="CNPJ" FontSize="16"/>
+                <Label Content="CNPJ" FontSize="16" Foreground="#fb3374"/>
                 <TextBox x:Name="txtCNPJ" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="Contato" FontSize="16"/>
+                <Label Content="Contato" FontSize="16" Foreground="#fb3374"/>
                 <TextBox x:Name="txtContato" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="E-mail" FontSize="16"/>
+                <Label Content="E-mail" FontSize="16" Foreground="#fb3374"/>
                 <TextBox x:Name="txtEmail" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="Inscrição estadual" FontSize="16"/>
-                <TextBox x:Name="txtEscEstadual" Padding="8" Width="300" HorizontalAlignment="Left"/>
+                <Label Content="Inscrição estadual" FontSize="16" Foreground="#fb3374"/>
+                <TextBox x:Name="txtInscEstadual" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="Responsável" FontSize="16"/>
+                <Label Content="Responsável" FontSize="16" Foreground="#fb3374"/>
                 <TextBox x:Name="txtResponsavel" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="Tipo" FontSize="16"/>
+                <Label Content="Data de criação" FontSize="16" Foreground="#fb3374"/>
+
+                <DatePicker x:Name="dpCriacao" Padding="8" Width="300" HorizontalAlignment="Left" FontSize="16" BorderBrush="#2ccbcb"/>
+                <Label Content="Tipo" FontSize="16" Foreground="#fb3374"/>
+
                 <StackPanel Orientation="Horizontal">
-                    <RadioButton GroupName="rdTipo" FontSize="16" Margin="10 0 59 0">Pública</RadioButton>
-                    <RadioButton GroupName="rdTipo" FontSize="16">Privada</RadioButton>
+                    <RadioButton x:Name="rdTipoPublico" GroupName="rdTipo" FontSize="16" Margin="10 0 59 0" Foreground="#484180">Pública</RadioButton>
+                    <RadioButton x:Name="rdTipoPrivada" GroupName="rdTipo" FontSize="16" Foreground="#484180">Privada</RadioButton>
                 </StackPanel>
 
 
@@ -61,30 +65,32 @@
 
             <StackPanel Grid.Column="1">
 
-                <Label Content="Endereço" FontSize="20" Margin="-2" FontFamily="Impact"/>
+                <Label Content="Endereço" FontSize="20" Margin="-2" FontFamily="Rubik" Foreground="#484180" FontWeight="Bold"/>
 
-                <Label Content="Cidade" FontSize="16"/>
+                <Label Content="Cidade" FontSize="16" Foreground="#fb3374"/>
                 <TextBox x:Name="txtCidade" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="Rua" FontSize="16"/>
+                <Label Content="Rua" FontSize="16" Foreground="#fb3374"/>
                 <TextBox x:Name="txtRua" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="Bairro" FontSize="16"/>
+                <Label Content="Bairro" FontSize="16" Foreground="#fb3374"/>
                 <TextBox x:Name="txtBairro" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="CEP" FontSize="16"/>
+                <Label Content="CEP" FontSize="16" Foreground="#fb3374"/>
                 <TextBox x:Name="txtCEP" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="N°" FontSize="16"/>
-                <TextBox x:Name="txtNumero" Padding="8" Width="300" HorizontalAlignment="Left"/>
-
-                <Label Content="Ponto de referência" FontSize="16"/>
+                <Label Content="Ponto de referência" FontSize="16" Foreground="#fb3374"/>
                 <TextBox x:Name="txtReferencia" Padding="8" Width="300" HorizontalAlignment="Left"/>
 
-                <Label Content="UF" FontSize="16"/>
-                <TextBox x:Name="txtUF" Padding="8" Width="300" HorizontalAlignment="Left"/>
+                <Label Content="N°" FontSize="16" Foreground="#fb3374"/>
+                <TextBox x:Name="txtNumero" Padding="8" Width="150" HorizontalAlignment="Left"/>
 
-                <Button x:Name="btCadastrar" Content="Cadastrar" Width="150" Height="50" HorizontalAlignment="Left" Background="Wheat" FontFamily="Impact" FontSize="20" VerticalAlignment="Stretch" Margin="0,20,0,0" Click="btCadastrar_Click"/>
+                <Label Content="UF" FontSize="16" Foreground="#fb3374"/>
+                <TextBox x:Name="txtUF" Padding="8" Width="150" HorizontalAlignment="Left"/>
+
+                <Button x:Name="btCadastrar" Content="Cadastrar" Width="150" Height="50" HorizontalAlignment="Left" 
+                        Background="#484180" FontFamily="Rubik" FontSize="20" VerticalAlignment="Stretch" Margin="0,20,0,0" 
+                        Click="btCadastrar_Click" FontWeight="Bold" Foreground="#fbdb34"/>
 
 
             </StackPanel>
